@@ -156,8 +156,8 @@ const TableBody = ({ data, index }) => {
       </td>
       <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left min-w-[165px]">
         <div className="flex text-gray-600">
-          #{data.rank}<span className="-mt-1">{data.rankType}</span>/
-          <span className="text-[#ff9f56]">{data.outoff}</span> in India
+          #{data?.rank}<span className="-mt-1">{data?.rankType}</span>/
+          <span className="text-[#ff9f56]">{data?.outoff}</span> in India
         </div>
         <div className="flex items-center gap-1">
         <Image
@@ -192,7 +192,7 @@ const TableBody = ({ data, index }) => {
               alt=""
               className="mt-1 rounded-full bg-white -ml-2 mr-0.5"
             />
-            + {data.plus} more
+            + {data?.plus} more
             <Image
               src={require("../../../public/down-blue.svg")}
               width={10}
