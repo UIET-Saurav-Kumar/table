@@ -10,10 +10,10 @@ const TableBody = ({ data  , index}) => {
   return (
     <tr className="divide-x divide-gray-200 ">
 
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left">
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left min-w-[50px]">
         # {index}
       </td>
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left " >
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left min-w-[450px]" >
       {data?.featured == true &&<div className="relative mb-2">
          <div className="h-8 w-20 absolute bg-red-500 -top-6 left-20 rounded-full text-white flex justify-center items-center mb-4"> featured </div>
         </div>}
@@ -83,7 +83,8 @@ const TableBody = ({ data  , index}) => {
           </div>
         </div>
       </td>
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left">
+
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left min-w-[140px] ">
         <div className="text-[#27b89b]">₹ {formatNumber(data?.fee)}</div>
         <div className="text-gray-600">BE/B.tech</div>
         <div className="text-gray-600">- 1st Year Fees</div>
@@ -98,7 +99,9 @@ const TableBody = ({ data  , index}) => {
           Compare Fees
         </div>
       </td>
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left">
+
+
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left min-w-[170px]">
         <div className="text-[#27b89b]">₹ {formatNumber(data?.avgpack)}</div>
         <div className="text-gray-600">Average Package</div>
         <div className="text-[#27b89b]">₹ {formatNumber(data?.highpack)}</div>
@@ -114,7 +117,7 @@ const TableBody = ({ data  , index}) => {
           Compare Placement
         </div>
       </td>
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-600 align-top text-left space-y-1">
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-600 align-top text-left space-y-1 min-w-[200px]">
         <div className="flex gap-2 ">
           <Image
             src={require("../../../public/dot.svg")}
