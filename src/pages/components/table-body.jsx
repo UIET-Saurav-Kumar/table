@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 
-const TableBody = ({ data }) => {
+const TableBody = ({ data  , index}) => {
 
   const formatNumber = (num) => {
     return num?.toString()?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -11,10 +11,12 @@ const TableBody = ({ data }) => {
     <tr className="divide-x divide-gray-200 ">
 
       <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left">
-        # {data?.id}
+        # {index}
       </td>
-      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left relative" >
-        {data?.featured == true && <div className="h-8 w-20 absolute bg-red-500 -top-2 left-20 rounded-full text-white flex justify-center items-center mb-4"> featured </div>}
+      <td className="px-3 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-top text-left " >
+      {data?.featured == true &&<div className="relative mb-2">
+         <div className="h-8 w-20 absolute bg-red-500 -top-6 left-20 rounded-full text-white flex justify-center items-center mb-4"> featured </div>
+        </div>}
         <div>
           <div className="flex gap-2  items-start">
             <Image

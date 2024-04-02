@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <div>
    {/* <div onClick={()=>setPage((pre) => pre+1)}>increment</div> */}
-<div className="flex space-x-4">
+<div className="flex space-x-4 mt-5">
     
 
         <button onClick={() => sortBy('fee', 'asc')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -90,7 +90,7 @@ export default function Home() {
         placeholder="Search by name"
         value={searchTerm}
         onChange={handleSearch}
-        className="border border-gray-300 rounded-md p-2 mb-4"
+        className="border border-gray-300 rounded-md p-2 mb-4 w-full mt-5 px-2"
       />
 
 
@@ -121,7 +121,7 @@ export default function Home() {
         <tbody className="bg-white divide-y divide-gray-200 ">
           {data?.map((item , index) => {
             return (
-            <TableBody data={item} key={index}   />
+            <TableBody data={item} key={index} index={index+1}   />
              )
           })}
           
